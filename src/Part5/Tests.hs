@@ -60,4 +60,4 @@ prop_myFilter lst = myFilter (\x -> x `mod` 2 == 1) lst == filter (\x -> x `mod`
 prop_myPartition :: [Int] -> Bool
 prop_myPartition lst =
     let pred x = x `mod` 2 == 1 in
-    myPartition pred lst == (filter pred lst, filter (not.pred) lst)
+    myPartition pred lst == (filter pred lst, filter (not . pred) lst)
